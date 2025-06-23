@@ -1,6 +1,16 @@
+
+
+import Chai from  './one.jsx'
+
+
 function App() {
   return (
-    <h1>I am learning ReactVite with chai aur code | Nirmalya kar</h1>
+    <>
+    <Chai />
+    <h1>Hello Good Evening </h1>
+    <p>Hello i am learing React now </p>
+    </>
+   
   )
 }
 
