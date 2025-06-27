@@ -1,0 +1,74 @@
+/* Animate the background gradient */
+body {
+  margin: 0;
+  padding: 0;
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(-45deg, #1e1e1e, #2c3e50, #34495e, #1e1e1e);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Gradient background animation */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Headings */
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: aquamarine;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px #000;
+  animation: popIn 0.5s ease forwards;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: paleturquoise;
+  animation: popIn 0.7s ease forwards;
+}
+
+/* Buttons */
+button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgb(158, 109, 109);
+  border: 2px solid white;
+  padding: 12px 24px;
+  margin: 10px;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Animations */
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
