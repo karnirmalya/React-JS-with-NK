@@ -15,3 +15,8 @@ cd file_name
 dir
 npm run dev
 ```
+
+# React Fiber Architecture
+Read about react fiber here (diff --> differentiate)
+## link -->>   
+https://github.com/acdlite/react-fiber-architecture
