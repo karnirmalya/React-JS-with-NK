@@ -19,7 +19,21 @@ function App() {
 
     // if(counter==25) setCounter(0)
     //   else
+
+//counter will be updated once only since the value is passed in bundles but react fiber commits final changes only
     setCounter(counter + 1)
+    // setCounter(counter + 1)
+    // setCounter(counter + 1)
+    // setCounter(counter + 1)
+    
+
+    //if we want to change the value of counter as wished then we can do as:-(prevCounter --> last updated state)
+    // setCounter(prevCounter)
+    // setCounter((prevCounter)=>prevCounter+1)
+    // setCounter((counter)=>counter+1)
+    // setCounter((hunter)=>hunter+1)
+
+    
   //  console.log("Value added",Math.random());
    
   }
@@ -31,7 +45,11 @@ function App() {
     
     // if(counter<=0) setCounter(0)
     //   else
-    setCounter(counter-1)
+    setCounter(counter=>counter-1)
+    // setCounter(counter=>counter-1)
+    // setCounter(counter=>counter-1)
+    // setCounter(counter=>counter-1)
+    // setCounter(counter=>counter-1)
   }
   return (
     <>
