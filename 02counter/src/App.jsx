@@ -7,7 +7,7 @@ function App() {
    
   //React does UI updation
   //   [variable,function(thi changes the value of counter in UI)]
-  const [counter,setCounter]=useState(10)
+  const [counter,setCounter]=useState(5)
 
 
   //let counter = 51
