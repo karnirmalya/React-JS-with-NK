@@ -1,13 +1,11 @@
 //CODE FOR CURRENCY CONVERTING
 
-
-
 import { useState } from "react";
 import { InputBox } from "./components";
-import useCurrencyInfo from "./hooks/useCurrencyInfo"; //curly braces
+import useCurrencyInfo from "./hooks/useCurrencyInfo.js"; //curly braces
 
 function App() {
-  const [amount, setAmount] = useState();
+  const [amount, setAmount] = useState("");
   const [from, setFrom] = useState("inr");
 
   const [to, setTo] = useState("usd");
@@ -39,21 +37,20 @@ function App() {
           <form
             onSubmit={(e) => {
               e.preventDefault();
-              convert()
+              convert();
             }}
           >
             <div className="w-full mb-1">
               <InputBox
-               label="From"
-               amount={amount}
+                label="From"
+                amount={amount}
+                currencyOptions={options}
+                onAmountChange={(amount) => setAmount(amount)}
+                onCurrencyChange={(currency) => setFrom(currency)}
+                selectCurrency={from}
 
-              currencyOptions={options}
-               onAmountChange={(amount) => setAmount(amount)}
-               onCurrencyChange={(currency)=>setFrom(currency)}
-               selectCurrency={from}
-
-              // currencyDisable={true}
-                />
+                //currencyDisable={true}
+              />
             </div>
             <div className="relative w-full h-0.5">
               <button
@@ -66,19 +63,20 @@ function App() {
             </div>
             <div className="w-full mt-1 mb-4">
               <InputBox
-               label="To"
-               amount={convertedAmount}
-               currencyOptions={options}
-               onCurrencyChange={(currency)=>setTo(currency)}
-               selectCurrency={to}
-              //  amountDisable={true}
-               />
+                label="To"
+                amount={convertedAmount}
+                currencyOptions={options}
+                onCurrencyChange={(currency) => setTo(currency)}
+                selectCurrency={to}
+                 //amountDisable={true}
+              />
             </div>
             <button
               type="submit"
               className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg"
             >
-               Convert  <strong >{baseCurrency.toUpperCase()}</strong>  to  <strong>{targetCurrency.toUpperCase()}</strong>
+              Convert <strong>{from.toUpperCase()}</strong> to{" "}
+              <strong>{to.toUpperCase()}</strong>
             </button>
           </form>
         </div>
@@ -89,14 +87,11 @@ function App() {
 
 export default App;
 
-
-
 //CODE FOR INR BEING FIXED AND SWAP WORKING PROPERLY
-
 
 // import { useState } from "react";
 // import { InputBox } from "./components";
-// import useCurrencyInfo from "./hooks/useCurrencyInfo";
+// import useCurrencyInfo from "./hooks/useCurrencyInfo.js";
 
 // function App() {
 //   const [amount, setAmount] = useState("");
