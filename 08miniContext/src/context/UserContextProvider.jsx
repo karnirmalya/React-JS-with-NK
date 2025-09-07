@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import userContext from "./usercontext";
+import userContext from "../context/userContext";
 
 
 //children => prop( jo bhi a raha he usse as it is pass kardo)
