@@ -4,7 +4,7 @@ import logo from "../mylogo.png"
 
 // <a> --> Link (if you use a tag then the oage reloads and in react we dont have page refrsh)
 //href --> to
-//navlink --> additional think 
+//navlink --> additional thing like isActive which helps in styling the active link
 
 export default function Header() {
     return (
